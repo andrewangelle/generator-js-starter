@@ -4,42 +4,42 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   /*
-	  informing webpack of the location
-    of our app's files
-	*/
+    First line we are informing webpack 
+    of the location of our app's files,
+    and limiting the scope of what webpack 
+    will look at to the /src folder
+  */
   context: path.resolve(__dirname, "src"),
   /*
-	  Telling webpack to do its magic 
-	  beginning at /src/index.js
-
-    **single entry point
-	*/
+    Telling webpack to do its magic 
+    beginning at /src/index.js
+  */
   entry: {
-    app: ".index.js",
+    main: "./index.js",
   },
   /*
-	   declaring that whenever webpack is done,
-	   put the resulting code in a /dist folder
-	   inside of a file named bundle.js
-	*/
+     declaring that whenever webpack is done,
+     put the resulting code in a /dist folder
+     inside of a file named bundle.js
+  */
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
-    publicPath: "/"
+    publicPath: "dist/"
   },
   /*
       Telling webpack dev server to serve files from
       /src folder.
       Hot module reloading enabled.
-	*/
+  */
   devServer: {
     contentBase: path.resolve(__dirname, "./src"),
     hot: true
   },
   /*
-	  plugins below are related to code splitting
-	  and importing/exporting single modules 
-	*/
+    plugins below are related to code splitting
+    and importing/exporting single modules 
+  */
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
@@ -54,15 +54,24 @@ module.exports = {
     new webpack.NamedModulesPlugin()
   ],
   /*
-	  Module is single object that will contain
-	  a all of the different tools/loaders that this
-	  project's webpack will support in its bundling. 
+    Module is single object that will contain
+    a all of the different tools/loaders that this
+    project's webpack will support in its bundling. 
 
-	  rules is an array of objects. Each object
-	  is an individulal tool"
-	*/
+    rules is an array of objects. Each object
+    is an individulal tool"
+  */
   module: {
     rules: [
+      {
+        test: /\.(png|jpg)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: { limit: 10000 }
+          }
+        ]
+      },
       {
         test: /\.js$/,
         use: [
