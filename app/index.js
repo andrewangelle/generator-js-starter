@@ -20,29 +20,10 @@ module.exports = class extends Generator {
         name    : 'appDescription',
         message : 'Your project description'
       }
-<<<<<<< HEAD
-    ],
-    props => {
-      this.appName = props.appName;
-      this.appDescription = props.appDescription;
-
-      this.template('gitignore', '.gitignore');
-      this.template('eslintrc', '.eslintrc');
-      this.template('babelrc', '.babelrc');
-      this.template('webpack.config.js');
-      this.template('_package.json', 'package.json');
-      this.template('README.md');
-      this.directory('build', 'build');
-      this.directory('src', 'src');
-      this.directory('test', 'test');
-
-      cb();
-=======
     ])
     .then(answers => {
       this.props.appName = answers.appName;
       this.props.appDescription = answers.appDescription;
->>>>>>> b93faf266580f7adcc2c02c4b2b349e793d819d6
     });
   }
 

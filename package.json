@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "generator-es6-starter",
-=======
   "name": "generator-js-starter",
->>>>>>> b93faf266580f7adcc2c02c4b2b349e793d819d6
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
