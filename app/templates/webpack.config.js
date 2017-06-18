@@ -1,21 +1,16 @@
 const webpack = require("webpack");
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+
   /*
-    First line we are informing webpack 
-    of the location of our app's files,
-    and limiting the scope of what webpack 
-    will look at to the /src folder
-  */
-  context: path.resolve(__dirname, "src"),
-  /*
-    Telling webpack to do its magic 
-    beginning at /src/index.js
+    Telling webpack to do start its magic 
+    at the beginning at /src/index.js
   */
   entry: {
-    main: "./index.js",
+    main: "./src/index.js",
   },
   /*
      declaring that whenever webpack is done,
@@ -25,7 +20,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
-    publicPath: "dist/"
+    publicPath: "/"
   },
   /*
       Telling webpack dev server to serve files from
@@ -51,7 +46,10 @@ module.exports = {
       filename: "[name].bundle.css",
       allChunks: true
     }),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+        }) 
   ],
   /*
     Module is single object that will contain
