@@ -1,0 +1,41 @@
+{
+  "name": "generator-js-app-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {},
+  "keywords": [
+    "yeoman-generator",
+    "generator",
+    "plugin",
+    "app",
+    "boilerplate",
+    "template",
+    "scaffold",
+    "starter",
+    "kit",
+    "seed",
+    "webpack",
+    "babel",
+    "sass"
+  ],
+  "repository": {
+    "type": "",
+    "url": ""
+  },  
+  "author": {
+    "name": "Andrew Angelle",
+    "email": "andrewangelle@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^20.0.4",
+    "underscore.string": "^3.3.4",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-generator": "^1.1.1",
+    "yeoman-test": "^1.6.0"
+  }
+}
