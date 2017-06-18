@@ -1,5 +1,5 @@
 {
-  "name": "generator-js-app-starter",
+  "name": "generator-js-starter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -25,17 +25,13 @@
   "repository": {
     "type": "",
     "url": ""
-  },  
+  },
   "author": {
     "name": "Andrew Angelle",
     "email": "andrewangelle@gmail.com"
   },
   "license": "ISC",
   "dependencies": {
-    "jest": "^20.0.4",
-    "underscore.string": "^3.3.4",
-    "yeoman-assert": "^3.0.0",
-    "yeoman-generator": "^1.1.1",
-    "yeoman-test": "^1.6.0"
+    "yeoman-generator": "^1.1.1"
   }
 }
