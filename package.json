@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "generator-es6-starter",
+=======
+  "name": "generator-js-starter",
+>>>>>>> b93faf266580f7adcc2c02c4b2b349e793d819d6
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -25,17 +29,13 @@
   "repository": {
     "type": "",
     "url": ""
-  },  
+  },
   "author": {
     "name": "Andrew Angelle",
     "email": "andrewangelle@gmail.com"
   },
   "license": "ISC",
   "dependencies": {
-    "jest": "^20.0.4",
-    "underscore.string": "^3.3.4",
-    "yeoman-assert": "^3.0.0",
-    "yeoman-generator": "^1.1.1",
-    "yeoman-test": "^1.6.0"
+    "yeoman-generator": "^1.1.1"
   }
 }
