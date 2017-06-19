@@ -1,7 +1,7 @@
 {
-  "name": "uglydick",
+  "name": "<%= appName %>",
   "version": "0.0.0",
-  "description": "uglydick",
+  "description": "<%= appName %>",
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server --inline --hot",
