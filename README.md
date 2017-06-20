@@ -51,7 +51,7 @@ Boot up!
 $ npm start
 ```
 
-Then go to https://localhost:8080. You should see the landing page
+Then go to localhost:8080 in your browser and you should see the landing page.
 
-You can start tweaking your app by opening up and editing /src/index.js
+You can start tweaking your app by opening up and editing /src/index.js.
 
